@@ -59,6 +59,19 @@ Note that the Body Tracker name should match the Body Tracker Name specified in 
 
 Axis Studio must be configured for BVH broadcasting.
 
+![Axis Studio BVH](/docs/axis_studio_bvh.png)
+
+| Option | Description |
+| :----- | :---------- |
+| Skeleton | Use the standard Axis Studio Skeleton | 
+| Rotation | Use YXZ |
+| Displacement | Enable |
+| Frame Type | Binary |
+| Protocol | UDP |
+| Destination Address | 255.255.255.255 (broadcast) |
+| Destination Port | 7004 (default) |
+
+
 ## Licensing
 
 Code in this repository is licensed under the MIT license.
