@@ -122,13 +122,6 @@ func _on_axis_studio_packet(data : AxisStudioBody.JointData) -> void:
 		_abs_positions[joint] = pos
 		_abs_rotations[joint] = rot
 
-	# Calculate and set the root joint under the hips
-	var root := _body_tracker.get_joint_transform(XRBodyTracker.JOINT_HIPS)
-	root.basis = Basis.IDENTITY
-	root.origin = root.origin.slide(Vector3.UP)
-	_body_tracker.set_joint_transform(XRBodyTracker.JOINT_ROOT, root)
-	_body_tracker.set_joint_flags(XRBodyTracker.JOINT_ROOT, JOINT_TRACKING)
-
 	# Apply to the XRBodyTracker
 	for joint in AxisStudioBody.JOINT_MAPPING:
 		var body : XRBodyTracker.Joint = joint["body"]
@@ -144,6 +137,13 @@ func _on_axis_studio_packet(data : AxisStudioBody.JointData) -> void:
 
 		# Set the joint flags
 		_body_tracker.set_joint_flags(body, JOINT_TRACKING)
+
+	# Calculate and set the root joint under the hips
+	var root := _body_tracker.get_joint_transform(XRBodyTracker.JOINT_HIPS)
+	root.basis = Basis.IDENTITY
+	root.origin = root.origin.slide(Vector3.UP)
+	_body_tracker.set_joint_transform(XRBodyTracker.JOINT_ROOT, root)
+	_body_tracker.set_joint_flags(XRBodyTracker.JOINT_ROOT, JOINT_TRACKING)
 
 	# Indicate we are tracking the body
 	_body_tracker.body_flags = BODY_TRACKING
