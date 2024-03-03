@@ -20,7 +20,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install 'gdtoolkit==4.*'
-      - name: Lint Godot VMC Tracker
+      - name: Lint Godot Axis Studio Tracker
         run: |
           gdlint addons/godot_axis_studio_tracker
 
