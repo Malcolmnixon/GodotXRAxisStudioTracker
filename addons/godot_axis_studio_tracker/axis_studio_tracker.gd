@@ -10,7 +10,7 @@ extends Node
 
 
 ## Body tracker name
-@export var body_tracker_name : String = "/mvn/body"
+@export var body_tracker_name : String = "/axis_studio/body"
 
 ## Position mode
 @export_enum("Free", "Calibrate", "Locked") var position_mode : int = 0
