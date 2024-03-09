@@ -7,6 +7,8 @@
 
 This repository contains an Axis Studio BVH Broadcast decoder for Godot that can drive avatars through the XR Tracker system.
 
+![Axis Studio Preview](/docs/axis_studio_preview.png)
+
 ## Versions
 
 Official releases are tagged and can be found [here](https://github.com/Malcolmnixon/GodotXRAxisStudioTracker/releases).

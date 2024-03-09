@@ -54,8 +54,8 @@ func _enter_tree():
 
 	# Register our autoload user settings object
 	add_autoload_singleton(
-			"AxisStudioTracker",
-			"res://addons/godot_axis_studio_tracker/axis_studio_tracker.gd")
+			"AxisStudioPlugin",
+			"res://addons/godot_axis_studio_tracker/axis_studio_plugin.gd")
 
 
 func _exit_tree():

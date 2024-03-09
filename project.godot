@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-AxisStudioTracker="*res://addons/godot_axis_studio_tracker/axis_studio_tracker.gd"
+AxisStudioPlugin="*res://addons/godot_axis_studio_tracker/axis_studio_plugin.gd"
 
 [axis_studio_tracker]
 
