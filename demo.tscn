@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://btisi43jtpet"]
+[gd_scene load_steps=14 format=3 uid="uid://btisi43jtpet"]
 
 [ext_resource type="PackedScene" uid="uid://bhc6nngwjdvum" path="res://assets/test_chan/Test-Chan.fbx" id="1_lkeve"]
 [ext_resource type="Texture2D" uid="uid://drjoya1j38i21" path="res://assets/ambientcg.com/Carpet003_1K-JPG_Color.jpg" id="1_pfl7p"]
@@ -35,6 +35,11 @@ material = SubResource("StandardMaterial3D_ahrhg")
 outer_radius = 0.6
 rings = 32
 ring_segments = 8
+
+[sub_resource type="SphereMesh" id="SphereMesh_tw3o4"]
+material = SubResource("StandardMaterial3D_ahrhg")
+radius = 0.05
+height = 0.2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhsxi"]
 bg_color = Color(0, 0, 0, 0.498039)
@@ -118,6 +123,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
 mesh = SubResource("TorusMesh_c2425")
 skeleton = NodePath("")
 
+[node name="Forward" type="MeshInstance3D" parent="Chan/XRBodyModifier3D/GroundRing"]
+transform = Transform3D(1, -8.74228e-08, -8.74228e-08, 8.74228e-08, -4.37114e-08, 1, -8.74228e-08, -1, -4.37114e-08, -5.96046e-08, 0, -0.6)
+mesh = SubResource("SphereMesh_tw3o4")
+
 [node name="Kun" type="Node3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.6, 0, 0)
 
@@ -177,6 +186,10 @@ blend_shapes/mouthStretchRight = 0.00253638
 transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 0, 0.05, 0)
 mesh = SubResource("TorusMesh_c2425")
 skeleton = NodePath("")
+
+[node name="Forward" type="MeshInstance3D" parent="Kun/XRBodyModifier3D/GroundRing"]
+transform = Transform3D(1, -8.74228e-08, -8.74228e-08, 8.74228e-08, -4.37114e-08, 1, -8.74228e-08, -1, -4.37114e-08, -5.96046e-08, 0, -0.6)
+mesh = SubResource("SphereMesh_tw3o4")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 anchors_preset = 3

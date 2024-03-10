@@ -90,8 +90,9 @@ func _on_axis_studio_packet(data : AxisStudioBody.JointData) -> void:
 		var pos := data.positions[joint]
 		var rot := data.rotations[joint]
 
-		# If hips then consider position calibration
+		# Special handling for hips
 		if joint == AxisStudioBody.Joint.HIPS:
+			# Apply position-mode controls
 			match _position_mode:
 				PositionMode.CALIBRATE:
 					# Calibrate on first position
@@ -133,10 +134,15 @@ func _on_axis_studio_packet(data : AxisStudioBody.JointData) -> void:
 		# Set the joint flags
 		_body_tracker.set_joint_flags(body, JOINT_TRACKING)
 
-	# Calculate and set the root joint under the hips
-	var root := _body_tracker.get_joint_transform(XRBodyTracker.JOINT_HIPS)
-	root.basis = Basis.IDENTITY
-	root.origin = root.origin.slide(Vector3.UP)
+	# Get the hips transform
+	var hips := _body_tracker.get_joint_transform(XRBodyTracker.JOINT_HIPS)
+
+	# Construct the root under the hips pointing forwards
+	var root_y = Vector3.UP
+	var root_z = -hips.basis.x.cross(root_y)
+	var root_x = root_y.cross(root_z)
+	var root_o := hips.origin.slide(Vector3.UP)
+	var root := Transform3D(root_x, root_y, root_z, root_o).orthonormalized()
 	_body_tracker.set_joint_transform(XRBodyTracker.JOINT_ROOT, root)
 	_body_tracker.set_joint_flags(XRBodyTracker.JOINT_ROOT, JOINT_TRACKING)
 
