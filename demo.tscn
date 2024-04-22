@@ -115,7 +115,7 @@ blend_shapes/mouthPressRight = 0.0310566
 blend_shapes/mouthStretchLeft = 0.0145674
 blend_shapes/mouthStretchRight = 0.00253638
 
-[node name="XRBodyModifier3D" type="XRBodyModifier3D" parent="Chan/ChanAvatar/Test-Chan/Armature/Skeleton3D" index="3"]
+[node name="XRBodyModifier3D" type="XRBodyModifier3D" parent="Chan/ChanAvatar/Test-Chan/Armature/Skeleton3D" index="2"]
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 0)
 body_tracker = &"/axis_studio/body_tracker"
 bone_update = 1
@@ -181,7 +181,7 @@ blend_shapes/mouthPressRight = 0.0310566
 blend_shapes/mouthStretchLeft = 0.0145674
 blend_shapes/mouthStretchRight = 0.00253638
 
-[node name="XRBodyModifier3D" type="XRBodyModifier3D" parent="Kun/KunAvatar/Test-Kun/Armature/Skeleton3D" index="3"]
+[node name="XRBodyModifier3D" type="XRBodyModifier3D" parent="Kun/KunAvatar/Test-Kun/Armature/Skeleton3D" index="2"]
 transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, 0, 0, 0)
 body_tracker = &"/axis_studio/body_tracker"
 bone_update = 1
