@@ -1,3 +1,6 @@
+# 1.2.0
+- Updated for changes to XR Tracker names and hierarchy
+
 # 1.1.0
 - Improved root motion
 - Added scaling controls
