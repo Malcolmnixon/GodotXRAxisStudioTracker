@@ -16,7 +16,7 @@ func _enter_tree() -> void:
 	# Get the body tracker name
 	var body_tracker_name : String = ProjectSettings.get_setting(
 		"axis_studio_tracker/tracking/body_tracker_name",
-		"/axis_studio/body")
+		"/axis_studio/body_tracker")
 
 	# Get the position mode
 	var position_mode = ProjectSettings.get_setting(
