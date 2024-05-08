@@ -18,8 +18,6 @@ The following branches are in active development:
 |-----------|-------------------------------|------------------|
 |  master   | Current development branch    |  Godot 4.3-dev6+ |
 
-<sub>NOTE: This requires the [XR Trackers](https://github.com/godotengine/godot/pull/90645) PR which is in the Godot master branch, but no release has been made.</sub>
-
 ## Overview
 
 [Axis Studio](https://neuronmocap.com/pages/axis-studio) is a Motion Capture package by Perception Neuron.
@@ -42,7 +40,7 @@ The plugin has numerous options to control behavior:
 | Option | Description |
 | :----- | :---------- |
 | Tracking - Position Mode | Controls the position of the character:<br>- Free = Free Movement<br>- Calibrate = Calibrate to origin on first frame<br>- Locked = Lock to origin |
-| Tracking - Body Tracker Name | Name for the XRBodyTracker |
+| Tracking - Body Tracker Name | Name for the [XRBodyTracker](https://docs.godotengine.org/en/latest/classes/class_xrbodytracker.html#class-xrbodytracker) |
 | Network - Udp Listener Port | Port to listen for BVH network packets |
 
 ### Character Importing
