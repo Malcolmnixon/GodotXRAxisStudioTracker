@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://btisi43jtpet"]
+[gd_scene load_steps=14 format=3 uid="uid://btisi43jtpet"]
 
 [ext_resource type="PackedScene" uid="uid://bhc6nngwjdvum" path="res://assets/test_chan/Test-Chan.fbx" id="1_lkeve"]
 [ext_resource type="Texture2D" uid="uid://drjoya1j38i21" path="res://assets/ambientcg.com/Carpet003_1K-JPG_Color.jpg" id="1_pfl7p"]
